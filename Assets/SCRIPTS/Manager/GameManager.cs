@@ -47,18 +47,50 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown("h"))
         {
             HideShowTuto();
-        }        
-        if (Input.GetKeyDown("0"))
+        }
+
+        #region SlowMotion 0.3 to 0.9
+
+        if (Input.GetKeyDown("3"))
         {
-            TimeManager.instance.SlowMotion(0f, 1);
+            TimeManager.instance.SlowMotion(0.3f, 1);
+        }
+        if (Input.GetKeyDown("4"))
+        {
+            TimeManager.instance.SlowMotion(0.4f, 1);
         }
         if (Input.GetKeyDown("5"))
         {
             TimeManager.instance.SlowMotion(0.5f, 1);
         }
+        if (Input.GetKeyDown("6"))
+        {
+            TimeManager.instance.SlowMotion(0.6f, 1);
+        }
+        if (Input.GetKeyDown("7"))
+        {
+            TimeManager.instance.SlowMotion(0.7f, 1);
+        }
+        if (Input.GetKeyDown("8"))
+        {
+            TimeManager.instance.SlowMotion(0.8f, 1);
+        }
+        if (Input.GetKeyDown("9"))
+        {
+            TimeManager.instance.SlowMotion(0.9f, 1);
+        }
+        #endregion
+
+
+        
+        
         if (Input.GetKeyDown("2"))
         {
             TimeManager.instance.SlowMotion(2, 1);
+        }
+        if (Input.GetKeyDown("0"))
+        {
+            TimeManager.instance.SlowMotion(0f, 1);
         }
         if (Input.GetKeyDown("1"))
         {
