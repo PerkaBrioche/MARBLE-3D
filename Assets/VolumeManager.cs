@@ -13,6 +13,11 @@ public class VolumeManager : MonoBehaviour
         }
     }
     
+    private void Start()
+    {
+        _animator = GetComponent<Animator>();
+    }
+    
     public void PlayAnim(string trigger)
     {
         _animator.SetTrigger(trigger);

@@ -43,7 +43,7 @@ public class TargetController : MonoBehaviour
             {
                 
                 actualball = closestBall;
-                VolumeManager.Instance.Play("Target");
+                VolumeManager.Instance.PlayAnim("changeball");
                 _cameraController.UpdateTarget(closestBall.transform);
                 _AfficheWinner.GetComponent<MeshRenderer>().material.mainTexture = closestBall.GetComponent<Renderer>().material.mainTexture;
             }
