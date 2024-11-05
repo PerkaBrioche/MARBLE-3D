@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    private Transform target; // Le Transform à suivre
+    [SerializeField] private Transform target; // Le Transform à suivre
     public float smoothSpeed = 0.125f; // Vitesse de l'interpolation
     [NonSerialized]   public Vector2 offset; // Décalage par rapport à la cible
 

@@ -6,6 +6,8 @@ public class BallController : MonoBehaviour
     private Rigidbody _rigidbody;
     private ParticleSystem _particleSystem;
     [SerializeField] private GameObject _particleSystemBounce;
+    [SerializeField] private GameObject _particuleSystemContact;
+    public string BallName;
 
     private void Start()
     {
@@ -13,21 +15,28 @@ public class BallController : MonoBehaviour
         _particleSystem.Stop();
     }
 
-    public void ChangeMaterial(Material material, float mass)
+    public void ChangeMaterial(Texture texture, float mass, string name)
     {
+        BallName = name;
         Rigidbody rb = GetComponent<Rigidbody>();
         rb.mass = mass;
-        GetComponent<Renderer>().material = material;
+        GetComponent<Renderer>().material.mainTexture = texture;
     }
     
      private bool isTouchingGround = false;
 
-    private void OnCollisionEnter(Collision collision)
+
+
+     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground") && !isTouchingGround)
         {
             isTouchingGround = true;
             OnLand();
+        }
+        if(collision.gameObject.CompareTag("Ball"))
+        {
+            Instantiate(_particuleSystemContact, transform.position, Quaternion.identity);
         }
     }
 

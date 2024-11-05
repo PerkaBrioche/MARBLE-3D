@@ -5,7 +5,11 @@ public class TargetController : MonoBehaviour
     [SerializeField] private CameraController _cameraController;
     private GameObject[] allBalls;
     private GameObject closestBall;
+    private GameObject actualball;
     private float closestDistance;
+    public bool _TrackClosestBall = false;
+
+    [SerializeField] private GameObject _AfficheWinner;
 
     private void Update()
     {
@@ -34,7 +38,15 @@ public class TargetController : MonoBehaviour
 
         if (closestBall != null)
         {
-            _cameraController.UpdateTarget(closestBall.transform);
+            if(!_TrackClosestBall){ return;}
+            if(actualball != closestBall)
+            {
+                
+                actualball = closestBall;
+                VolumeManager.Instance.Play("Target");
+                _cameraController.UpdateTarget(closestBall.transform);
+                _AfficheWinner.GetComponent<MeshRenderer>().material.mainTexture = closestBall.GetComponent<Renderer>().material.mainTexture;
+            }
         }
     }
 }

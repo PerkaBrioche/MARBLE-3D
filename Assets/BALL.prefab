@@ -4878,6 +4878,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _particleSystemBounce: {fileID: 3432958286849152088, guid: 87ee7299dd44ed747af24dbb91bcd33b, type: 3}
+  _particuleSystemContact: {fileID: 1429954232896169633, guid: 83036083a4ebcd34f98131bd3cf6f4d2, type: 3}
+  BallName: 
 --- !u!1 &3062548278022237534
 GameObject:
   m_ObjectHideFlags: 0
