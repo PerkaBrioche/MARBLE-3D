@@ -1,26 +1,38 @@
 using System;
+using JetBrains.Annotations;
+using TMPro;
 using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
     private Rigidbody _rigidbody;
-    private ParticleSystem _particleSystem;
+    [SerializeField] private ParticleSystem _particleSystemSmoke;
     [SerializeField] private GameObject _particleSystemBounce;
     [SerializeField] private GameObject _particuleSystemContact;
+    [SerializeField] private GameObject _RingBall;
+    [SerializeField] private TextMeshPro _balltext;
+    public AudioClip ballClip;
     public string BallName;
 
     private void Start()
     {
-        _particleSystem = transform.GetChild(0).GetComponent<ParticleSystem>();
-        _particleSystem.Stop();
+        _particleSystemSmoke.Stop();
     }
 
-    public void ChangeMaterial(Texture texture, float mass, string name)
+    public void UpdateRank(int position)
+    {
+        _balltext.text = BallName + " - " + position + "st";
+    }
+
+    public void ChangeMaterial(Texture texture, float mass, string name, AudioClip ballclip)
     {
         BallName = name;
+        
         Rigidbody rb = GetComponent<Rigidbody>();
         rb.mass = mass;
-        GetComponent<Renderer>().material.mainTexture = texture;
+        GetComponent<MeshRenderer>().material.mainTexture = texture;
+        _RingBall.GetComponent<MeshRenderer>().material.mainTexture = texture;
+        ballClip = ballclip;
     }
     
      private bool isTouchingGround = false;
@@ -68,25 +80,20 @@ public class BallController : MonoBehaviour
     // Fonctions à jouer pour chaque état
     private void OnLand()
     {
-        Instantiate(_particleSystemBounce, _particleSystem.transform.position, Quaternion.identity);
-        _particleSystem.Play();
-        Debug.Log("La balle a touché le sol pour la première fois après être en l'air.");
+        Instantiate(_particleSystemBounce, _particleSystemSmoke.transform.position, Quaternion.identity);
+        _particleSystemSmoke.Play();
     }
 
     private void OnLeaveGround()
     {
-        _particleSystem.Stop();
-
-        Debug.Log("La balle a quitté le sol.");
+        _particleSystemSmoke.Stop();
     }
 
     private void OnStayOnGround()
     {
-        Debug.Log("La balle est en contact avec le sol.");
     }
 
     private void OnAir()
     {
-        Debug.Log("La balle est en l'air.");
     }
 }
