@@ -7,6 +7,12 @@ TagManager:
   - Ball
   - FxTemporaire
   - Ground
+  - Layout
+  - tmpWin
+  - SecondCamera
+  - SpawnPoint
+  - MineSpawner
+  - Affiche
   layers:
   - Default
   - TransparentFX
