@@ -4,6 +4,7 @@ using NaughtyAttributes;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class LevelSpawner : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class LevelSpawner : MonoBehaviour
     [SerializeField] private Vector3 _scaleOffeset;
 
      private GameObject[] AllSpawnPoints;
+     
+     
     [Button("SPAWN TERRAIN")]
     private void SpawnTerrain()
     {
@@ -48,6 +51,7 @@ public class LevelSpawner : MonoBehaviour
         }
         _terrainList.Clear();
     }
+    
     [Button("REMOVE LAST TERRAIN")]
     private void RemoveLastTerrain()
     {
@@ -87,5 +91,34 @@ public class LevelSpawner : MonoBehaviour
         Debug.LogError("NO POINT FIND !!");
         return null;
     }
+
+
+
+    [Space(20)] [Header("RANDOM GENERATION")] 
+    
+    [SerializeField] private int _numTerrainToSpawn;
+    [SerializeField] private bool _spawnFinishLine;
+    [SerializeField] private bool _eraseEverything;
+
+    [Foldout("GENERATION DONT TOUCH")][SerializeField] private List<GameObject> _terrainPrefabs;
+    [Foldout("GENERATION DONT TOUCH")] [SerializeField] private GameObject _endTerrain;
+
+    [Button]
+    private void SpawnGeneration()
+    {
+        if(_eraseEverything){RemoveAllTerrain();}
+        for (int i = 0; i < _numTerrainToSpawn; i++)
+        {
+            _terrainToSpawn = _terrainPrefabs[Random.Range(0, _terrainPrefabs.Count)];
+            SpawnTerrain();
+        }
+
+        if (_spawnFinishLine)
+        {
+            _terrainToSpawn = _endTerrain;
+            SpawnTerrain();
+        }
+    }
+    
 
 }
