@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WinTrigger : MonoBehaviour
 {
+    
+    [SerializeField] private GameObject _bezierLine;
     private TargetController _targetController; 
     private TextMeshProUGUI TMP_Win;
     private bool GameWon = false;
@@ -17,7 +19,7 @@ public class WinTrigger : MonoBehaviour
     {
         if (other.CompareTag("Ball") && !GameWon)
         {
-            TimeManager.instance.SlowMotion(0, 2);
+            TimeManager.instance.SlowMotion(0, 4);
             GameWon = true;
             _targetController._TrackClosestBall = false;
             Win(other.transform);
@@ -30,7 +32,10 @@ public class WinTrigger : MonoBehaviour
         {
             transform.GetChild(i).gameObject.SetActive(true);
         }
+        _bezierLine.SetActive(false);
         TMP_Win.GetComponent<TypewriterByCharacter>().ShowText(closestBall.GetComponent<BallController>().BallName + " WIN !");
+        
+        PlayerPrefs.SetInt(closestBall.GetComponent<BallController>().BallName, PlayerPrefs.GetInt(closestBall.GetComponent<BallController>().BallName) + 1);
         TMP_Win.GetComponent<TypewriterByCharacter>().StartShowingText();
      //   TMP_Win.text = 
     }

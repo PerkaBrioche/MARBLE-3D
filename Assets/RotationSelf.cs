@@ -3,6 +3,7 @@ using UnityEngine;
 public class RotationSelf : MonoBehaviour
 {
     [SerializeField] private bool _canTurn = true;
+    [SerializeField] private bool _antiHoraire = true;
     [SerializeField] private float _MINturnSpeed = 40;
     [SerializeField] private float _MAXturnSpeed = 70;
     private float _turnSpeed = 0;
@@ -14,6 +15,12 @@ public class RotationSelf : MonoBehaviour
         }
 
         _turnSpeed = Random.Range(_MINturnSpeed, _MAXturnSpeed);
+        
+        
+        if (_antiHoraire)
+        {
+            _turnSpeed *= -1;
+        }
     }
 
     private void Update()

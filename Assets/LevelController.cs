@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 
 public class LevelController : MonoBehaviour
 {
+    [SerializeField] private Vector3 _terrainOffset;
     [Header("MINE CONTROL")]
     [SerializeField] private int _numberMineToSpawn;
     [SerializeField] private List<MineSpawner> _listMineInLevel;
@@ -32,7 +33,6 @@ public class LevelController : MonoBehaviour
         for (int i = 0; i < _numberMineToSpawn; i++)
         {
             int randomIndex = Random.Range(0, _numberMineInLevel-1);
-            if(_listMineInLevel[randomIndex] == null){continue;}
             _listMineInLevel[randomIndex].SpawwnMine();
             _listMineInLevel.RemoveAt(randomIndex);
         }
@@ -76,11 +76,7 @@ public class LevelController : MonoBehaviour
 
     public void SecurityRotationCheck(Vector3 Rotation)
     {
-        Quaternion targetRotation = Quaternion.Euler(Rotation);
-        if (Quaternion.Angle(targetRotation, transform.rotation) > 0.1f) // Tolérance de 0.1°
-        {
-            Debug.LogError("TRANSFORM DIFFERENT || MY ROTATION of " + transform.name + " is " + transform.rotation.eulerAngles + " AND I WANT " + Rotation);
-            transform.rotation = targetRotation;
-        }
+        Vector3 finalRotation = new Vector3( Rotation.x + _terrainOffset.x , Rotation.y + _terrainOffset.y , Rotation.z + _terrainOffset.z);
+        transform.eulerAngles = finalRotation ;
     }
 }

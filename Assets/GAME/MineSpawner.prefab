@@ -44,5 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24968457361e41e41908b322b8896a3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minePrefab: {fileID: 2539812998785767869, guid: 9a797dba94f82c34a9ef7659618c3b61, type: 3}
+  _explosiveMinePrefab: {fileID: 2539812998785767869, guid: 9a797dba94f82c34a9ef7659618c3b61, type: 3}
+  _IceMinePrefab: {fileID: 6066270429334450444, guid: 7620e008c4a41554e94cf55ca8b74e7f, type: 3}
+  _deathMinePrefab: {fileID: 5559494513173813558, guid: 8775332526b30a8489f2ac41fb46f0d6, type: 3}
   _rotationOffset: {x: 0, y: 0, z: -30}
