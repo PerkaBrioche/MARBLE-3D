@@ -296,6 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canTurn: 1
+  _antiHoraire: 1
   _MINturnSpeed: 40
   _MAXturnSpeed: 70
 --- !u!1 &1346398031037635955
@@ -940,8 +941,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4554d80ad28824040a4f04c37595aa6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_speed: 1
-  min_speed: 1
+  max_speed: 1.02
+  min_speed: 0.5
 --- !u!1 &4577936699511431661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,8 +1098,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4554d80ad28824040a4f04c37595aa6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_speed: 1.7
-  min_speed: 1.2
+  max_speed: 2.02
+  min_speed: 0.98
 --- !u!1 &5351743015877725642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,7 +1611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max_speed: 1.3
-  min_speed: 1
+  min_speed: 0.5
 --- !u!1 &8276999761729006586
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,6 +1843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canTurn: 1
+  _antiHoraire: 1
   _MINturnSpeed: 40
   _MAXturnSpeed: 70
 --- !u!1 &8702403561121274017
@@ -2657,7 +2659,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d04be3e7c9950df4b805503f84f4f269, type: 2}
     - target: {fileID: 919132149155446097, guid: a06407f978dfe8741b7672add958b0ec, type: 3}
       propertyPath: m_Name
-      value: Camiion
+      value: Camion
       objectReference: {fileID: 0}
     - target: {fileID: 4752241548726016364, guid: a06407f978dfe8741b7672add958b0ec, type: 3}
       propertyPath: m_TagString
@@ -2927,6 +2929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canTurn: 1
+  _antiHoraire: 1
   _MINturnSpeed: 40
   _MAXturnSpeed: 70
 --- !u!1 &6300408952316210924 stripped

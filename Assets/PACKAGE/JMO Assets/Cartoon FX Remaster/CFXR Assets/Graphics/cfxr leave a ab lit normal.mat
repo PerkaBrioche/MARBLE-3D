@@ -17,7 +17,6 @@ Material:
   - _CFXR_DITHERED_SHADOWS_ON
   - _CFXR_LIGHTING_ALL
   - _CFXR_LIGHTING_BACK
-  - _FADING_ON
   - _NORMALMAP
   m_InvalidKeywords:
   - _CFXR_OVERLAYBLEND_RGBA
@@ -110,7 +109,7 @@ Material:
     - _UseLighting: 3
     - _UseLightingWorldPosOffset: 0
     - _UseNormalMap: 1
-    - _UseSP: 1
+    - _UseSP: 0
     - _UseSecondColor: 0
     - _UseUV2Distortion: 0
     - _UseUVDistortion: 0

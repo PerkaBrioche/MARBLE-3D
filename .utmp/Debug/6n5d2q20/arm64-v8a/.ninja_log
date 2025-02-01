@@ -1,0 +1,19 @@
+# ninja log v5
+216	1492	7599563301562610	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	87fe4a05d5971381
+1	1177	7599563298439189	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	d80bda71f77565f2
+253	1494	7599563301644897	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	cc2c2f980a63e918
+17	1282	7599563299428182	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	451ce5051ad0a14
+63	1309	7599563299779051	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	a5ae557919cbf516
+173	1442	7599563301116110	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	fcce74e3ff4e3c5d
+34	1497	7599563301598390	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	eaddb56dfe28155b
+129	1523	7599563301867776	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	339ab1ff7a1ce3c7
+1523	1796	7599563304548451	C:/Users/lemer/Bureau/JV/TiktokGames/MARBLE 3D/Library/PramData/AndroidApplicationController/Cache/com.UnityTechnologies.Mobile3DTemplate/gradle-project/unityLibrary/build/intermediates/cxx/Debug/6n5d2q20/obj/arm64-v8a/libgame.so	5707be44c289c718
+17	1077	7599632745406449	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	d80bda71f77565f2
+97	1126	7599632745952108	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	fcce74e3ff4e3c5d
+3	1157	7599632746203215	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	451ce5051ad0a14
+144	1162	7599632746287268	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	cc2c2f980a63e918
+163	1230	7599632746972578	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	a5ae557919cbf516
+257	1264	7599632747313337	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	87fe4a05d5971381
+53	1282	7599632747464537	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	eaddb56dfe28155b
+218	1379	7599632748462565	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	339ab1ff7a1ce3c7
+1379	1587	7599632750501482	C:/Users/lemer/Bureau/JV/TiktokGames/MARBLE 3D/Library/PramData/AndroidApplicationController/Cache/com.UnityTechnologies.Mobile3DTemplate/gradle-project/unityLibrary/build/intermediates/cxx/Debug/6n5d2q20/obj/arm64-v8a/libgame.so	5707be44c289c718
