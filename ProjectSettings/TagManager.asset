@@ -13,6 +13,7 @@ TagManager:
   - SpawnPoint
   - MineSpawner
   - Affiche
+  - SecondLayout
   layers:
   - Default
   - TransparentFX

@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d04be3e7c9950df4b805503f84f4f269, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -173,7 +173,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d04be3e7c9950df4b805503f84f4f269, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -427,9 +427,25 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 815774e8c939848488e2c66af0ebfa76, type: 2}
+    - target: {fileID: -3385550918376938565, guid: a06407f978dfe8741b7672add958b0ec, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d04be3e7c9950df4b805503f84f4f269, type: 2}
+    - target: {fileID: -2457098386712359334, guid: a06407f978dfe8741b7672add958b0ec, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d04be3e7c9950df4b805503f84f4f269, type: 2}
+    - target: {fileID: 371697881464681118, guid: a06407f978dfe8741b7672add958b0ec, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d04be3e7c9950df4b805503f84f4f269, type: 2}
     - target: {fileID: 919132149155446097, guid: a06407f978dfe8741b7672add958b0ec, type: 3}
       propertyPath: m_Name
       value: Samurai
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752241548726016364, guid: a06407f978dfe8741b7672add958b0ec, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -503,6 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d7a07ab58d5b7f42a1dce9dfa87b2e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _terrainOffset: {x: 0, y: 0, z: 0}
   _numberMineToSpawn: 2
   _listMineInLevel:
   - {fileID: 3853848652624893212}
